@@ -27,7 +27,9 @@ Edit this document to include your answers after each question. Make sure to lea
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
     .map() - produces a brand new array that changes the data inside the given array. It requires a return statement. 
+
     .filter() - produces a brand new array that is filtered using a true or false conditional. Only if something is true will it be added to the array. It also requires a return statement.
+    
     .reduce() - it returns a single value and is usually used for addition or multiplication. it is different in that it requires two parameters to function, an accumulator and a current value.
 
 
