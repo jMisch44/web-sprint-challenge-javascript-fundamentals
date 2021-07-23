@@ -29,10 +29,18 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-  let counter = 0;
-  for(let i = 1; i <= number; i++){
-    counter = counter + i;
+  // let counter = 0;
+  function factorial(number){
+    let counter = 0;
+     for(let i = 1; i <= number; i++){
+      counter = counter + i;
+      return counter;
+    }
+    return factorial();
   }
+  // for(let i = 1; i <= number; i++){
+  //   counter = counter + i;
+  // }
   return counter;
 }
   console.log('task 1 summation', summation(4));
@@ -61,9 +69,8 @@ const zooAnimals = [
 
   function animalNames(array){
     const displayNames = []
-    array.forEach((item) => {
-       displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
-    });
+    array.forEach((item) => displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
+    );
     return displayNames;
   }
   
@@ -117,29 +124,25 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(param1, param2, cb){
-      return cb(param1, param2);
-  }
+  let consume = (param1, param2, cb) => cb(param1, param2);
+  
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(num1, num2){
-    return num1 + num2;
-  }
+  let add = (num1, num2) => num1 + num2;
+  
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(num1, num2){
-   return num1 * num2;
-  }
+let multiply = (num1, num2) => num1 * num2;
+
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(first, last){
-   return `Hello ${first} ${last}, nice to meet you!`;
-  }
+let greeting = (first, last) => `Hello ${first} ${last}, nice to meet you!`;
+
 
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
@@ -230,9 +233,26 @@ console.log(cuboidTwo.surfaceArea()); // 130
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
+// class CubeMaker extends CuboidMaker{
+//   constructor(dimensions){
+//     super(dimensions);
+//   }
+//   cubeVolume(){
+//     return Math.pow(this.length, 3);
+//   }
+//   cubeSurfaceArea(){
+//     return 6 * Math.pow(this.length, 2);
+//   }
+// }
 
+// const cube = new CubeMaker({
+//   length: 5,
+//   width: 5,
+//   height: 5
+// });
 
-
+// console.log(cube.cubeVolume());
+// console.log(cube.cubeSurfaceArea());
 
 
   /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
