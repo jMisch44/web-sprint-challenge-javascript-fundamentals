@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-/* the variable internal can be accessed because it's scope is nestedFunction which is nested inside of myFunction. Internal is not inside of nestedFunction's scope but closure means that the function can reach outside to it's parent function to receive the variable. */
+/* The variable internal can be accessed because its scope is nestedFunction, which is nested inside of myFunction. Internal is not inside of nestedFunction's scope, but closure means that the function can reach outside to it's parent function to receive the variable. */
 
 
 
@@ -39,10 +39,6 @@ function summation(number) {
   return counter;
 }
   console.log('task 1 summation', summation(4));
-// for(let i = 1; i <= number; i++){
-  //   counter = counter + i;
-  // }
-  // return counter;
 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -68,9 +64,8 @@ const zooAnimals = [
   */
 
   function animalNames(array){
-    const displayNames = []
-    array.forEach((item) => displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
-    );
+    const displayNames = [];
+    array.forEach((item) => displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`));
     return displayNames;
   }
   

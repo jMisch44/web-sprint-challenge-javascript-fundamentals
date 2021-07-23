@@ -26,16 +26,13 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
-    .map() - produces a brand new array that changes the data inside the given array. It requires a return statement. 
+    .map and .filter both return a new array. Both of these methods require a return statement. .map is used to change things in a array, so an example of when you would use it is if you needed to make properties lowercase in an array. .filter is used to filter through an array using a conditional. An example of when to use it is if you wanted to look through an array and find only values that are less than 5. Then the new array would only contain the values less than 5. .reduce is different than the other two because it only returns a single value. It is generally used for addition or multiplication but could be used for anything. It is also the only method of the three that need two parameters for initialization. An example of when to use .reduce would be if you wanted to find an average number from an array. You would use the number produced from reduce and divide the length of the array by that number.  
 
-    .filter() - produces a brand new array that is filtered using a true or false conditional. Only if something is true will it be added to the array. It also requires a return statement.
-    
-    .reduce() - it returns a single value and is usually used for addition or multiplication. it is different in that it requires two parameters to function, an accumulator and a current value.
 
 
 2. Explain the difference between a callback and a higher order function.
 
-    A callback is a function that use as a argument. You pass a callback into a higher order function. 
+    A callback is a function that is used as a argument. You pass a callback function into a higher order function. 
 
 
 3. Explain what a closure is.
@@ -45,13 +42,13 @@ Edit this document to include your answers after each question. Make sure to lea
 
 4. Describe the four principles of the 'this' keyword.
 
-    Window binding - when the 'this' keyword has no context and binds to the window. In the browser that is the window, in node that is the global object and in strict mode it returns undefined . It is considered an error.
+    Window binding - When the 'this' keyword has no context and binds to the window. In the browser that is the window, in node that is the global object and in strict mode it returns undefined. It is considered an error.
 
-    Implicit binding - when the this keyword looks to the left of the dot to find it's context when a method is invoked. It applies to objects that have methods.
+    Implicit binding - When the this keyword looks to the left of the dot to find it's context when a method is invoked. It applies to objects that have methods.
 
-    New binding - when using the new keyword when invoking a function, the 'this' inside of the function refers to the new object being created. When invoking a constructor function, the 'this keyword refers to the new object that was made.
+    New binding - When using the new keyword when invoking a function, the 'this' inside of the function refers to the new object being created. When invoking a constructor function, the 'this' keyword refers to the new object that was made.
 
-    Explicit binding - when we tell javaScript explicitly what we want the 'this' keyword bound to using .call, .apply, or .bind. .call and .apply will both invoke the function immediately. .call takes arguments 1 by 1 and .apply takes an array.  .bind will take arguments 1 by 1 but will return a function to be invoked later.
+    Explicit binding - When we tell javaScript explicitly what we want the 'this' keyword bound to using .call, .apply, or .bind. .call and .apply will both invoke the function immediately but .call takes arguments 1 by 1 and .apply takes an array.  .bind will take arguments 1 by 1 but will return a function to be invoked later.
 
 
 5. Why do we need super() in an extended class?
